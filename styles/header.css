@@ -1,0 +1,62 @@
+
+.header {
+    padding: 0 0 0 0;
+}
+
+.logo {
+    /* Точные отступы из Figma */
+    margin-top: 16px;
+    margin-left: 16px;
+}
+
+.logo-image {
+    /* Высота логотипа из Figma */
+    height: 20px; /* замените на высоту вашего лого */
+    width: 800px ; /* сохраняет пропорции */
+}
+
+.nav {
+    width: 100%;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: right;
+    
+    justify-content: space-between;
+    padding-top: 0px; /* 16px от верха */
+}
+
+
+
+.nav-link {
+    color: var(--color-main-black);
+    font-size: 24px;
+    font-weight: 400;
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: -10px;
+    height: 1px;
+    background-color: var(--color-main-black);
+    transition: right .22s;
+}
+
+
+.nav-link:hover::after {
+   right: 0;
+}
+
+@media (max-width: 480px) {
+    .header {
+        display: none;
+    }
+}
+

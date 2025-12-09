@@ -1,0 +1,94 @@
+/* Базовые стили */
+.about {
+    padding: 136px 0; /* 136px сверху и снизу */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1280px; /* или другая ширина контейнера */
+    margin: 0 auto;
+    padding: 0 20px; /* маленькие боковые отступы для адаптива */
+    box-sizing: border-box;
+}
+
+/* Контент с центрированием */
+.about-content {
+    max-width: 640px; /* Ширина картинки */
+    margin: 0 auto; /* Центрирование по горизонтали */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Картинка */
+.about-img {
+    width: 640px; /* Фиксированная ширина */
+    height: 662px; /* Фиксированная высота */
+    display: block;
+    margin-bottom: 40px; /* Отступ между картинкой и текстом */
+    
+    /* Для сохранения пропорций если картинка не точно 640x662 */
+    object-fit: cover; /* или contain в зависимости от эффекта */
+    object-position: center;
+}
+
+/* Текст */
+.about-title {
+    width: 640px; 
+    font-size: 18px; 
+    font-weight: 400; 
+    text-align: left; /* или center/justify */
+    color: --color-main-black; /* Настрой по Figma */
+    margin: 0;
+    padding: 0;
+    
+    word-wrap: break-word;
+    hyphens: auto; 
+}
+
+/* Альтернатива: текст на всю ширину картинки но с ограничением */
+.alternative-title {
+    max-width: 640px;
+    width: 100%; /* Будет растягиваться до max-width */
+}
+
+.about-button {
+    display: inline-block;
+    background-color: #808080; /* Серый фон */
+    color: #FFFFFF; /* Белый текст */
+    text-decoration: none;
+    font-size: 16px; /* Настрой по Figma */
+    font-weight: 500; /* Настрой по Figma */
+    padding: 12px 32px; /* Отступы внутри кнопки */
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 40px; /* Отступ от текста */
+    text-transform: uppercase; /* Если нужны заглавные буквы */
+    letter-spacing: 1px; /* Настрой по Figma */
+    
+    /* Чтобы кнопка была по ширине картинки */
+    width: 640px; /* Такая же ширина как у картинки и текста */
+    max-width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Эффекты при наведении */
+.about-button:hover {
+    background-color: #666666; /* Темнее серый при наведении */
+    transform: translateY(-2px); /* Легкий подъем */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.about-button:active {
+    transform: translateY(0); /* Возвращаем на место при клике */
+    background-color: #4d4d4d;
+}
+
+/* Фокус для доступности */
+.about-button:focus {
+    outline: 2px solid #808080;
+    outline-offset: 2px;
+}
